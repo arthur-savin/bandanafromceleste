@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bandanafromceleste - Bandanas personnalisés faits main</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barre promo -->
+    <div class="promo-bar">
+        <p>💌 Personnalisation offerte dès 2 bandanas — Expédition sous 48–72h</p>
+    </div>
+
+    <!-- Header sticky -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#hero">bandanafromceleste</a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#collections">Collections</a>
+                    <a href="#personnalisation">Personnaliser</a>
+                    <a href="#avis">Avis</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+                <a href="#personnalisation" class="btn btn-primary" >Créer mon bandana</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Des bandanas personnalisés, faits main, pour matcher ton <span class="highlight">mood</span> ✨</h1>
+                    <p class="hero-subtitle">Choisis la couleur, le motif et le prénom. Céleste le confectionne à la main, avec une finition premium.</p>
+                    <div class="hero-ctas">
+                        <a href="#personnalisation" class="btn btn-primary btn-large">
+                            Créer mon bandana
+                            <span class="sparkle">✦</span>
+                        </a>
+                        <a href="#collections" class="btn btn-secondary btn-large">Découvrir les best sellers</a>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge">❤ Fait main en France</span>
+                        <span class="badge">✔ Personnalisation express</span>
+                        <span class="badge">❤ Coton doux & durable</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="bandana-mockup">
+                        <div class="bandana-stack">
+                            <div class="bandana-item bandana-1"></div>
+                            <div class="bandana-item bandana-2"></div>
+                            <div class="bandana-item bandana-3"></div>
+                        </div>
+                        <div class="label-sticker">Céleste</div>
+                        <!-- Élément masqué (voir .hero .new-badge dans styles.css) : bulle verte "Nouveauté : Broderie prénom! ❤" -->
+                        <div class="new-badge is-hidden">Nouveauté : Broderie prénom! ❤</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Section Galerie Produits Livrés -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nos créations livrées avec amour ✨</h2>
+                    <p class="section-subtitle">Découvrez les bandanas personnalisés déjà confectionnés pour nos clients</p>
+                </div>
+                <div class="gallery-carousel-wrapper">
+                    <div class="gallery-carousel" id="galleryCarousel">
+                        <!-- Remplacez les src par vos vraies images de produits livrés -->
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="Images/La brasse.png" alt="Bandana bordeaux brodé LA BRASSE porté" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="Images/la brasse jaune.png" alt="Bandana jaune brodé LA BRASSE porté" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="Images/queen of paris.png" alt="Bandana rose saumon brodé QUEEN OF PARIS" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="Images/bandana noir.png" alt="Bandana bleu marine motif cachemire brodé" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="Images/image filles.png" alt="Création bandanafromceleste" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="https://via.placeholder.com/300x300/A8E6CF/7FE7C4?text=Bandana+6" alt="Bandana personnalisé livré" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="https://via.placeholder.com/300x300/FFB6C1/FF91A4?text=Bandana+7" alt="Bandana personnalisé livré" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="https://via.placeholder.com/300x300/DDA0DD/BA55D3?text=Bandana+8" alt="Bandana personnalisé livré" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dupliquer les items pour un défilement infini -->
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="https://via.placeholder.com/300x300/F7B6C8/E84A7A?text=Bandana+1" alt="Bandana personnalisé livré" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="https://via.placeholder.com/300x300/B9A8FF/8B7AE8?text=Bandana+2" alt="Bandana personnalisé livré" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="https://via.placeholder.com/300x300/E84A7A/C93A6A?text=Bandana+3" alt="Bandana personnalisé livré" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="https://via.placeholder.com/300x300/7FE7C4/5FD4A8?text=Bandana+4" alt="Bandana personnalisé livré" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-badge">Livré ✨</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Élément décoratif : fils de broderie -->
+        <div class="embroidery-threads-decoration"></div>
+
+        <!-- Section Tarifs & Personnalisation -->
+        <section class="tarifs-section" id="tarifs">
+            <div class="container">
+                <header class="tarifs-section-header">
+                    <span class="tarifs-icon tarifs-icon-scarf" aria-hidden="true">🧣</span>
+                    <h2>Bandana personnalisé brodé</h2>
+                    <p class="tarifs-subtitle">Fait main · Broderie artisanale · Création unique</p>
+                </header>
+
+                <div class="tarifs-grid">
+                    <!-- Broderie sur le côté -->
+                    <article class="tarif-card">
+                        <div class="tarif-card-header">
+                            <span class="tarif-icon" aria-hidden="true">🪡</span>
+                            <h3>Broderie sur le côté</h3>
+                        </div>
+                        <p class="tarif-desc">Texte brodé sur un côté du bandana · Personnalisation par lettres brodées</p>
+                        <div class="tarif-table-wrapper">
+                            <table class="tarif-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre de lettres</th>
+                                        <th>Prix</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 à 5 lettres</td>
+                                        <td><strong class="tarif-price">25 €</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 à 8 lettres</td>
+                                        <td><strong class="tarif-price">30 €</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ de 8 lettres</td>
+                                        <td><span class="tarif-sur-demande">Sur demande</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <!-- Broderie centrale -->
+                    <article class="tarif-card">
+                        <div class="tarif-card-header">
+                            <span class="tarif-icon" aria-hidden="true">🧵</span>
+                            <h3>Broderie centrale</h3>
+                        </div>
+                        <p class="tarif-desc">Texte brodé au centre du bandana</p>
+                        <div class="tarif-table-wrapper">
+                            <table class="tarif-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre de lettres</th>
+                                        <th>Prix</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Jusqu'à 10 lettres</td>
+                                        <td><strong class="tarif-price">40 €</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ de 10 lettres</td>
+                                        <td><span class="tarif-sur-demande">Sur demande</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Options de personnalisation : couleurs de fil -->
+                <div class="tarifs-custom-block">
+                    <div class="tarifs-custom-header">
+                        <span class="tarifs-icon tarifs-icon-palette" aria-hidden="true">🎨</span>
+                        <h3>Options de personnalisation</h3>
+                    </div>
+                    <p class="tarifs-custom-lead">Couleur des lettres : <strong>choix libre</strong></p>
+                    <p class="tarifs-custom-desc">Fils de broderie disponibles — choisissez la teinte qui vous ressemble</p>
+                    <div class="thread-colors" aria-label="Couleurs de fil disponibles">
+                        <span class="thread-pill" style="--thread: #F5D547;" title="Jaune"></span>
+                        <span class="thread-pill" style="--thread: #F7B6C8;" title="Rose"></span>
+                        <span class="thread-pill" style="--thread: #E84A7A;" title="Framboise"></span>
+                        <span class="thread-pill" style="--thread: #6B9BD1;" title="Bleu"></span>
+                        <span class="thread-pill" style="--thread: #7FE7C4;" title="Vert menthe"></span>
+                        <span class="thread-pill" style="--thread: #B9A8FF;" title="Violet"></span>
+                        <span class="thread-pill" style="--thread: #E8D5B5;" title="Beige"></span>
+                        <span class="thread-pill" style="--thread: #FF9F6B;" title="Orange"></span>
+                        <span class="thread-pill" style="--thread: #1F1F2A;" title="Noir"></span>
+                    </div>
+                </div>
+
+                <!-- Fabrication main -->
+                <div class="tarifs-fabrication">
+                    <div class="tarifs-fabrication-content">
+                        <span class="tarifs-icon tarifs-icon-needle" aria-hidden="true">🧵</span>
+                        <div>
+                            <h3>Broderie réalisée à la main</h3>
+                            <p>Chaque lettre est brodée avec soin sur tambour, pour un rendu unique et durable.</p>
+                        </div>
+                    </div>
+                    <div class="tarifs-tambour-visual" aria-hidden="true">
+                        <div class="tambour-circle">
+                            <span class="tambour-icon">🪡</span>
+                            <div class="tambour-stitches"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Couleurs de bandanas -->
+                <div class="tarifs-bandana-colors">
+                    <h3 class="tarifs-colors-title"><span class="tarifs-icon tarifs-icon-palette" aria-hidden="true">🎨</span> Couleurs de bandanas disponibles</h3>
+                    <div class="bandana-gammes">
+                        <div class="bandana-gamme">
+                            <h4>Gamme 1 — tons doux & lumineux</h4>
+                            <div class="color-swatches">
+                                <span class="swatch" style="--swatch: #C41E3A;" title="Rouge"></span>
+                                <span class="swatch" style="--swatch: #722F37;" title="Bordeaux"></span>
+                                <span class="swatch" style="--swatch: #FFD700;" title="Fluo"></span>
+                                <span class="swatch" style="--swatch: #FA8072;" title="Saumon"></span>
+                                <span class="swatch" style="--swatch: #F5DEB3;" title="Poudré"></span>
+                                <span class="swatch" style="--swatch: #DDA0DD;" title="Lila"></span>
+                                <span class="swatch" style="--swatch: #8B5CF6;" title="Violet"></span>
+                            </div>
+                        </div>
+                        <div class="bandana-gamme">
+                            <h4>Gamme 2 — tons profonds & naturels</h4>
+                            <div class="color-swatches">
+                                <span class="swatch" style="--swatch: #5C4033;" title="Chocolat"></span>
+                                <span class="swatch" style="--swatch: #808080;" title="Gris"></span>
+                                <span class="swatch" style="--swatch: #000080;" title="Marine"></span>
+                                <span class="swatch" style="--swatch: #1E3A8A;" title="Bleu roi"></span>
+                                <span class="swatch" style="--swatch: #40E0D0;" title="Turquoise"></span>
+                                <span class="swatch" style="--swatch: #87CEEB;" title="Ciel"></span>
+                                <span class="swatch" style="--swatch: #98D8AA;" title="Menthe"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Section Best-sellers -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-header">
+                <h2>Les bandanas préférés de la communauté</h2>
+                <p class="section-subtitle">Des couleurs douces, des détails qui claquent, et une qualité qui tient dans le temps.</p>
+            </div>
+            <div class="collections-layout">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Images/la brasse jaune.png" alt="La Brassee Jaune - Bandana jaune avec broderie">
+                            <button class="btn btn-product-rose product-btn">Personnaliser</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>La Brassee Jaune</h3>
+                            <p class="product-price">à partir de 19€</p>
+                            <div class="product-options">
+                                <span class="option-pill">Broderie</span>
+                                <span class="option-pill">Taille chien</span>
+                                <span class="option-pill">Duo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Images/La brasse.png" alt="La Brasse - Bandana lie-de-vin avec broderie">
+                            <button class="btn btn-product-lavande product-btn">Personnaliser</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>La Brasse Lie-de-Vin</h3>
+                            <p class="product-price">à partir de 19€</p>
+                            <div class="product-options">
+                                <span class="option-pill">Broderie</span>
+                                <span class="option-pill">Taille chien</span>
+                                <span class="option-pill">Duo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Images/queen of paris.png" alt="Queen of Paris - Bandana rose corail avec broderie">
+                            <button class="btn btn-product-rouge product-btn">Personnaliser</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Queen of Paris</h3>
+                            <p class="product-price">à partir de 19€</p>
+                            <div class="product-options">
+                                <span class="option-pill">Broderie</span>
+                                <span class="option-pill">Taille chien</span>
+                                <span class="option-pill">Duo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Images/bandana noir.png" alt="Sell the Kids for Food - Bandana bleu marine">
+                            <button class="btn btn-product-rose product-btn">Personnaliser</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Sell the Kids for Food</h3>
+                            <p class="product-price">à partir de 19€</p>
+                            <div class="product-options">
+                                <span class="option-pill">Broderie</span>
+                                <span class="option-pill">Taille chien</span>
+                                <span class="option-pill">Duo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="size-guide-card">
+                    <h3>Guide des tailles ✦</h3>
+                    <div class="size-list">
+                        <div class="size-item">
+                            <span class="size-label">S</span>
+                            <span class="size-desc">55 cm</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">M</span>
+                            <span class="size-desc">65 cm</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">L</span>
+                            <span class="size-desc">75 cm</span>
+                        </div>
+                    </div>
+                    <a href="#personnalisation" class="btn btn-primary">Je créé le mien</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Personnalisation -->
+    <section class="personnalisation" id="personnalisation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ton bandana en 3 étapes</h2>
+                <div class="instagram-notice" style="margin-top: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); border-radius: 12px; border: 2px solid #E84A7A;">
+                    <p style="font-size: 1.2rem; color: #E84A7A; font-weight: 700; margin-bottom: 0.5rem; text-align: center;">
+                        📱 Toute la phase d'achat ainsi que la phase de personnalisation se passe sur Instagram
+                    </p>
+                    <p style="text-align: center; margin: 0;">
+                        <a href="https://www.instagram.com/bandanafromceleste?igsh=MTZkdDg3MDhpaXFv" target="_blank" style="color: #E84A7A; text-decoration: underline; font-weight: 600; font-size: 1.1rem;">
+                            @bandanafromceleste
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="steps-container">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon step-icon-rose">1</div>
+                        <div class="step-stars">⭐⭐⭐⭐⭐</div>
+                        <h3>Choisis ton style</h3>
+                        <p>Couleur, motif, taille (humain / chien).</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon step-icon-lavande">2</div>
+                        <div class="step-stars">⭐⭐⭐⭐⭐</div>
+                        <h3>Ajoute ta touche</h3>
+                        <p>Prénom brodé, petit symbole (★, ♡, ✿).</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon step-icon-vert">3</div>
+                        <div class="step-stars">⭐⭐⭐⭐⭐</div>
+                        <h3>Céleste fabrique & expédie</h3>
+                        <p>Confection à la main, avec amour.</p>
+                    </div>
+                </div>
+                <div class="size-guide-card">
+                    <h3>Guide des tailles ✦</h3>
+                    <div class="size-list">
+                        <div class="size-item">
+                            <span class="size-label">S</span>
+                            <span class="size-desc">55 cm</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">M</span>
+                            <span class="size-desc">65 cm</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">L</span>
+                            <span class="size-desc">75 cm</span>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/bandanafromceleste?igsh=MTZkdDg3MDhpaXFv" target="_blank" class="btn btn-primary">Je créé le mien</a>
+                </div>
+            </div>
+
+           
+                <!-- CTA Instagram -->
+                <div class="instagram-cta" style="margin-top: 5cm; text-align: center; padding: 2rem; background: linear-gradient(135deg, #E84A7A 0%, #C93A6A 100%); border-radius: 12px; color: white;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Prêt à créer ton bandana personnalisé ?</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Contacte-nous sur Instagram pour passer ta commande !</p>
+                    <a href="https://www.instagram.com/bandanafromceleste?igsh=MTZkdDg3MDhpaXFv" target="_blank" class="btn" style="background: white; color: #E84A7A; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; display: inline-block; font-size: 1.1rem;">
+                        📱 Commander sur Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avis & À propos -->
+    <section class="avis-apropos" id="avis">
+        <div class="container">
+            <div class="section-header">
+                <h2>Elles en parlent mieux que nous</h2>
+            </div>
+            <div class="avis-apropos-content">
+                <div class="apropos-visual">
+                    <img src="Images/image filles.png" alt="Atelier bandanafromceleste – Céleste et ses bandanas" class="atelier-photo">
+                </div>
+                <div class="apropos-text">
+                    <div class="reviews-stats-inline">
+                        <div class="stat-item">
+                            <span class="stat-number">+1 200</span>
+                            <span class="stat-label">bandanas créés</span>
+                        </div>
+                        <div class="stat-divider">|</div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9/5</span>
+                            <span class="stat-label">moyenne ❤</span>
+                        </div>
+                    </div>
+                    <h2>Derrière chaque bandana, il y a Céleste</h2>
+                    <p>Tout est confectionné à la main, en petite série. Je sélectionne des tissus doux, résistants, et je brode chaque personnalisation avec soin.</p>
+                    <div class="values-pills">
+                        <span class="value-pill">❤ Fait main</span>
+                        <span class="value-pill">❤ Petites séries</span>
+                        <span class="value-pill">✔ Tissus choisis avec amour</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ & Newsletter -->
+    <section class="faq-newsletter" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vos questions fréquentes</h2>
+            </div>
+            <div class="faq-newsletter-layout">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>✔ Délais de fabrication ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Chaque bandana est confectionné à la main, donc comptez 48-72h après validation de votre commande. Pour les commandes urgentes, contactez-nous !</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Comment laver le bandana ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Lavage à la main ou machine à 30°C, programme délicat. Séchage à l'air libre pour préserver les couleurs et la broderie.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>✔ Personnalisation : quelles limites ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Prénom jusqu'à 12 caractères, symboles disponibles : ★, ♡, ✿, ✦. Pour des demandes spéciales, envoyez-nous un message !</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Retours : possible si personnalisé ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Les bandanas personnalisés ne peuvent pas être retournés, mais nous garantissons la qualité. En cas de problème, contactez-nous directement.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Tailles chien : comment mesurer ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Mesurez le tour de cou de votre chien avec un mètre ruban. S : 30-40cm, M : 40-50cm, L : 50-60cm. En cas de doute, choisissez la taille au-dessus.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Livraison internationale ?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oui ! Nous livrons en Europe. Les délais varient selon le pays (5-10 jours ouvrés). Les frais de port sont calculés au moment de la commande.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsletter-card">
+                    <h2>-10% sur ton premier bandana 💌</h2>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Ton email ici..." required class="newsletter-input">
+                        <button type="submit" class="btn btn-primary">Je veux mon code</button>
+                    </form>
+                    <p class="newsletter-disclaimer">Pas de spam. Désinscription en 1 clic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>bandanafromceleste</h3>
+                    <p>Bandanas personnalisés faits main avec amour ✨</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Informations</h4>
+                        <a href="#faq">CGV</a>
+                        <a href="#faq">Politique de confidentialité</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Suis-nous</h4>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© bandanafromceleste — Fait main</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
