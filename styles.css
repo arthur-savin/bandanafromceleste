@@ -106,7 +106,6 @@ html {
     text-size-adjust: 100%;
     /* Assurer que html prend toute la largeur */
     width: 100%;
-    max-width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -122,7 +121,6 @@ body {
     font-size: var(--font-size-base);
     /* Assurer que body prend toute la largeur sans marge */
     width: 100%;
-    max-width: 100%;
     margin: 0;
     padding: 0;
     min-width: 0;
@@ -130,32 +128,31 @@ body {
     position: relative;
 }
 
-/* Wrapper global - full width sur mobile, max-width sur desktop */
+/* ============================================
+   CONTAINER - MOBILE FIRST (FULL WIDTH)
+   ============================================ */
 .container {
-    /* Mobile-first : 100% de largeur avec padding */
+    /* MOBILE : 100% de largeur, AUCUNE contrainte max-width */
     width: 100%;
-    max-width: 100%;
+    max-width: none;  /* 🔥 CRITIQUE : aucune limite sur mobile */
     margin: 0;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-    /* Prévenir le débordement */
+    padding-inline: 16px; /* padding confortable mobile */
     box-sizing: border-box;
     position: relative;
 }
 
-/* Sur tablette et desktop : centrage avec max-width */
+/* ============================================
+   CONTAINER - DESKTOP (CENTRÉ AVEC MAX-WIDTH)
+   ============================================ */
 @media (min-width: 768px) {
     :root {
-        --max-width: min(1120px, 95vw);
+        --max-width: 1100px; /* Largeur max desktop */
     }
     
     .container {
         max-width: var(--max-width);
-        margin-left: auto;
-        margin-right: auto;
-        /* Réappliquer le padding sur desktop */
-        padding-left: var(--container-padding);
-        padding-right: var(--container-padding);
+        margin-inline: auto; /* Centrage automatique */
+        padding-inline: 24px; /* Padding desktop */
     }
 }
 
@@ -211,24 +208,7 @@ body {
     width: 100%;
 }
 
-.header .container {
-    /* Sur mobile : padding réduit pour utiliser toute la largeur */
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* Sur tablette et desktop : centrage avec max-width */
-@media (min-width: 768px) {
-    .header .container {
-        max-width: var(--max-width);
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+/* .header .container hérite automatiquement des règles de .container */
 
 .header.scrolled {
     padding: clamp(0.5rem, 1vw, 0.75rem) 0;
@@ -813,6 +793,83 @@ body {
     padding: var(--section-padding-desktop) 0;
     width: 100%;
     overflow-x: hidden;
+}
+
+/* Instagram Notice */
+.instagram-notice {
+    margin-top: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    border-radius: 12px;
+    border: 2px solid #E84A7A;
+}
+
+.instagram-notice-title {
+    font-size: var(--font-size-lg);
+    color: #E84A7A;
+    font-weight: 700;
+    margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+    text-align: center;
+}
+
+.instagram-notice-link {
+    text-align: center;
+    margin: 0;
+}
+
+.instagram-notice-link a {
+    color: #E84A7A;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+}
+
+.instagram-notice-link a:hover,
+.instagram-notice-link a:focus {
+    color: #C93A6A;
+    text-decoration: none;
+}
+
+/* Instagram CTA */
+.instagram-cta {
+    margin-top: clamp(3rem, 6vw, 5rem); /* Remplace 5cm par une valeur responsive */
+    text-align: center;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    background: linear-gradient(135deg, #E84A7A 0%, #C93A6A 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.instagram-cta h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    color: white;
+}
+
+.instagram-cta p {
+    font-size: var(--font-size-base);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.btn-instagram {
+    background: white;
+    color: #E84A7A;
+    font-weight: 600;
+    padding: clamp(0.875rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .steps-container {
@@ -1670,21 +1727,7 @@ body {
 .tarifs-section .container {
     position: relative;
     z-index: 1;
-    /* S'assurer que le container prend toute la largeur sur mobile */
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-    box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
-    .tarifs-section .container {
-        max-width: var(--max-width);
-        margin-left: auto;
-        margin-right: auto;
-    }
+    /* Hérite du comportement mobile-first de .container */
 }
 
 .tarifs-section-header {
