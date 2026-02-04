@@ -38,8 +38,33 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         mobileMenuToggle.classList.remove('active');
+        // Prévenir le scroll si le menu était ouvert
+        document.body.style.overflow = '';
     });
 });
+
+// Fermer le menu en cliquant en dehors
+document.addEventListener('click', (e) => {
+    const isClickInsideMenu = navMenu.contains(e.target);
+    const isClickOnToggle = mobileMenuToggle.contains(e.target);
+    
+    if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Gérer le scroll du body quand le menu est ouvert
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = '';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+    });
+}
 
 // ============================================
 // SCROLL ANIMATIONS (Fade In Up)
@@ -294,6 +319,45 @@ function debounce(func, wait) {
 const optimizedScrollHandler = debounce(() => {
     // Logique de scroll optimisée
 }, 10);
+
+// ============================================
+// GALLERY - DONNÉES ET GÉNÉRATION
+// ============================================
+
+const galleryImages = [
+    { src: 'Images/La brasse.png', alt: 'Bandana bordeaux brodé LA BRASSE porté' },
+    { src: 'Images/la brasse jaune.png', alt: 'Bandana jaune brodé LA BRASSE porté' },
+    { src: 'Images/queen of paris.png', alt: 'Bandana rose saumon brodé QUEEN OF PARIS' },
+    { src: 'Images/bandana noir.png', alt: 'Bandana bleu marine motif cachemire brodé' },
+    { src: 'Images/image filles.png', alt: 'Création bandanafromceleste' }
+];
+
+function renderGallery() {
+    const galleryCarousel = document.getElementById('galleryCarousel');
+    if (!galleryCarousel) return;
+
+    // Dupliquer les images 2x pour un défilement infini fluide
+    const imagesToShow = [...galleryImages, ...galleryImages];
+
+    galleryCarousel.innerHTML = imagesToShow.map(img => `
+        <div class="gallery-item">
+            <div class="gallery-image">
+                <img src="${img.src}" 
+                     srcset="${img.src} 1x, ${img.src} 2x"
+                     sizes="(max-width: 480px) 200px, (max-width: 768px) 275px, 295px"
+                     alt="${img.alt}" 
+                     loading="lazy"
+                     decoding="async">
+                <div class="gallery-overlay">
+                    <span class="gallery-badge">Livré ✨</span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Exécuter au chargement
+renderGallery();
 
 // ============================================
 // GALLERY CAROUSEL AUTO-SCROLL

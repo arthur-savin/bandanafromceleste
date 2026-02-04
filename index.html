@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#F7B6C8">
     <title>bandanafromceleste - Bandanas personnalisés faits main</title>
     
     <!-- Google Fonts -->
@@ -37,7 +38,7 @@
                     <span></span>
                     <span></span>
                 </button>
-            </div
+            </div>
         </div>
     </header>
 
@@ -85,104 +86,7 @@
                 </div>
                 <div class="gallery-carousel-wrapper">
                     <div class="gallery-carousel" id="galleryCarousel">
-                        <!-- Remplacez les src par vos vraies images de produits livrés -->
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="Images/La brasse.png" alt="Bandana bordeaux brodé LA BRASSE porté" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="Images/la brasse jaune.png" alt="Bandana jaune brodé LA BRASSE porté" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="Images/queen of paris.png" alt="Bandana rose saumon brodé QUEEN OF PARIS" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="Images/bandana noir.png" alt="Bandana bleu marine motif cachemire brodé" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="Images/image filles.png" alt="Création bandanafromceleste" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="https://via.placeholder.com/300x300/A8E6CF/7FE7C4?text=Bandana+6" alt="Bandana personnalisé livré" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="https://via.placeholder.com/300x300/FFB6C1/FF91A4?text=Bandana+7" alt="Bandana personnalisé livré" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="https://via.placeholder.com/300x300/DDA0DD/BA55D3?text=Bandana+8" alt="Bandana personnalisé livré" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dupliquer les items pour un défilement infini -->
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="https://via.placeholder.com/300x300/F7B6C8/E84A7A?text=Bandana+1" alt="Bandana personnalisé livré" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="https://via.placeholder.com/300x300/B9A8FF/8B7AE8?text=Bandana+2" alt="Bandana personnalisé livré" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="https://via.placeholder.com/300x300/E84A7A/C93A6A?text=Bandana+3" alt="Bandana personnalisé livré" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="https://via.placeholder.com/300x300/7FE7C4/5FD4A8?text=Bandana+4" alt="Bandana personnalisé livré" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <span class="gallery-badge">Livré ✨</span>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Les items sont générés par JavaScript (voir script.js) -->
                     </div>
                 </div>
             </div>
@@ -346,7 +250,11 @@
                 <div class="products-grid">
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="Images/la brasse jaune.png" alt="La Brassee Jaune - Bandana jaune avec broderie">
+                            <img src="Images/la brasse jaune.png" 
+                                 srcset="Images/la brasse jaune.png 1x, Images/la brasse jaune.png 2x"
+                                 sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 50vw"
+                                 alt="La Brassee Jaune - Bandana jaune avec broderie"
+                                 loading="lazy">
                             <button class="btn btn-product-rose product-btn">Personnaliser</button>
                         </div>
                         <div class="product-info">
@@ -361,7 +269,11 @@
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="Images/La brasse.png" alt="La Brasse - Bandana lie-de-vin avec broderie">
+                            <img src="Images/La brasse.png" 
+                                 srcset="Images/La brasse.png 1x, Images/La brasse.png 2x"
+                                 sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 50vw"
+                                 alt="La Brasse - Bandana lie-de-vin avec broderie"
+                                 loading="lazy">
                             <button class="btn btn-product-lavande product-btn">Personnaliser</button>
                         </div>
                         <div class="product-info">
@@ -376,7 +288,11 @@
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="Images/queen of paris.png" alt="Queen of Paris - Bandana rose corail avec broderie">
+                            <img src="Images/queen of paris.png" 
+                                 srcset="Images/queen of paris.png 1x, Images/queen of paris.png 2x"
+                                 sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 50vw"
+                                 alt="Queen of Paris - Bandana rose corail avec broderie"
+                                 loading="lazy">
                             <button class="btn btn-product-rouge product-btn">Personnaliser</button>
                         </div>
                         <div class="product-info">
@@ -391,7 +307,11 @@
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="Images/bandana noir.png" alt="Sell the Kids for Food - Bandana bleu marine">
+                            <img src="Images/bandana noir.png" 
+                                 srcset="Images/bandana noir.png 1x, Images/bandana noir.png 2x"
+                                 sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 50vw"
+                                 alt="Sell the Kids for Food - Bandana bleu marine"
+                                 loading="lazy">
                             <button class="btn btn-product-rose product-btn">Personnaliser</button>
                         </div>
                         <div class="product-info">
@@ -505,7 +425,12 @@
             </div>
             <div class="avis-apropos-content">
                 <div class="apropos-visual">
-                    <img src="Images/image filles.png" alt="Atelier bandanafromceleste – Céleste et ses bandanas" class="atelier-photo">
+                    <img src="Images/image filles.png" 
+                         srcset="Images/image filles.png 1x, Images/image filles.png 2x"
+                         sizes="(max-width: 768px) 100vw, 50vw"
+                         alt="Atelier bandanafromceleste – Céleste et ses bandanas" 
+                         class="atelier-photo"
+                         loading="lazy">
                 </div>
                 <div class="apropos-text">
                     <div class="reviews-stats-inline">
