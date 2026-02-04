@@ -19,52 +19,70 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
-// MOBILE MENU TOGGLE
+// MENU MOBILE (PANNEAU MODALE)
 // ============================================
 
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-const navMenu = document.getElementById('navMenu');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
 
-if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
-    });
+function openMobileMenu() {
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.add('active');
+        mobileMenuOverlay.setAttribute('aria-hidden', 'false');
+    }
+    if (mobileMenuToggle) {
+        mobileMenuToggle.classList.add('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'true');
+        mobileMenuToggle.setAttribute('aria-label', 'Fermer le menu');
+    }
+    document.body.style.overflow = 'hidden';
 }
 
-// Fermer le menu au clic sur un lien
-const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-        // Prévenir le scroll si le menu était ouvert
-        document.body.style.overflow = '';
-    });
-});
-
-// Fermer le menu en cliquant en dehors
-document.addEventListener('click', (e) => {
-    const isClickInsideMenu = navMenu.contains(e.target);
-    const isClickOnToggle = mobileMenuToggle.contains(e.target);
-    
-    if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-        document.body.style.overflow = '';
+function closeMobileMenu() {
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+        mobileMenuOverlay.setAttribute('aria-hidden', 'true');
     }
-});
+    if (mobileMenuToggle) {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+    }
+    document.body.style.overflow = '';
+}
 
-// Gérer le scroll du body quand le menu est ouvert
 if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', () => {
-        if (navMenu.classList.contains('active')) {
-            document.body.style.overflow = '';
+        if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+            closeMobileMenu();
         } else {
-            document.body.style.overflow = 'hidden';
+            openMobileMenu();
         }
     });
 }
+
+if (mobileMenuBackdrop) {
+    mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+}
+
+if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+}
+
+// Fermer le menu au clic sur un lien (panneau mobile)
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu-nav a, .mobile-menu-ctas a');
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
+
+// Fermer le menu avec la touche Échap
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
 
 // ============================================
 // SCROLL ANIMATIONS (Fade In Up)
@@ -342,12 +360,7 @@ function renderGallery() {
     galleryCarousel.innerHTML = imagesToShow.map(img => `
         <div class="gallery-item">
             <div class="gallery-image">
-                <img src="${img.src}" 
-                     srcset="${img.src} 1x, ${img.src} 2x"
-                     sizes="(max-width: 480px) 200px, (max-width: 768px) 275px, 295px"
-                     alt="${img.alt}" 
-                     loading="lazy"
-                     decoding="async">
+                <img src="${img.src}" alt="${img.alt}" loading="lazy">
                 <div class="gallery-overlay">
                     <span class="gallery-badge">Livré ✨</span>
                 </div>
